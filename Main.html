@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html lang="de-CH">
+
+    <head>
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Frontend Mentor | Invoice app</title>
+              
+            <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+            <link rel="Stylesheet" type="text/css" href="./CSS/stylesheet_main.css">
+            <link rel="Stylesheet" type="text/css" href="./CSS/stylesheet_viewInvoice.css">
+            <link rel="Stylesheet" type="text/css" href="./CSS/stylesheet_NewandEditInvoice.css">
+            
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+               
+    </head>
+
+    <body>
+
+        <div class="wrapper_content">
+
+            <div class="menu__itemtop">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" class="menu__itemtop--svg">
+                    <path fill="#FFF" fill-rule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/>
+                </svg>
+
+            </div>
+
+            <div class="menu__itemcenter">
+
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="menu__itemcenter--svgmoon">
+                    <path d="M19.502 11.342a.703.703 0 00-.588.128 7.499 7.499 0 01-2.275 1.33 7.123 7.123 0 01-2.581.46A7.516 7.516 0 018.74 11.06a7.516 7.516 0 01-2.198-5.316c0-.87.153-1.713.41-2.48.28-.817.69-1.559 1.226-2.197a.652.652 0 00-.102-.92.703.703 0 00-.588-.128C5.316.607 3.425 1.91 2.07 3.649A10.082 10.082 0 000 9.783C0 12.57 1.125 15.1 2.965 16.94a10.04 10.04 0 007.156 2.965c2.352 0 4.524-.818 6.262-2.173a10.078 10.078 0 003.579-5.597.62.62 0 00-.46-.793z"
+                    fill="#7E88C3" fill-rule="nonzero"/>
+                </svg>
+
+            </div>
+
+            <div class="menu__itembot">
+
+                <img src="./images/image-avatar.jpg" class="menu__itembot--pic">
+
+            </div>
+
+<!--     Wrapper Invoices     -->
+
+            <div class="wrapper_main disable">
+
+                <div class="header">
+
+                    <div class="header__title">
+
+                        <h1 class="header__title--title">Invoices</h1>
+                        <p class="header__title--subtitle"> <span class="header__select--mobile">These are total </span><span class="total__invoices">0</span> Invoices</p>
+
+                    </div>
+
+                    <div class="header__container">
+
+                        <div class="header__select">
+
+                            <p class="header__select--text">Filter <span class="header__select--mobile">by Status</span></p>
+                            
+                            <div class="header__title--filter">
+                                    
+                                    <div class="header__title--check">
+
+                                        <div class="header__title--quad">
+
+                                            <svg class="header__title--checksvg" width="10" height="8" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 4.5l2.124 2.124L8.97 1.28" stroke="#7C5DFA" stroke-width="1" fill-rule="evenodd"/>
+                                            </svg>
+
+                                        </div>
+
+                                        <p class="header__title--checktext">Draft</p>
+
+                                    </div>
+
+                                    <div class="header__title--check">
+
+                                        <div class="header__title--quad">
+
+                                            <svg class="header__title--checksvg" width="10" height="8" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 4.5l2.124 2.124L8.97 1.28" stroke="#7C5DFA" stroke-width="1" fill-rule="evenodd"/>
+                                            </svg>
+
+                                        </div>
+
+                                        <p class="header__title--checktext">Pending</p>
+
+                                    </div>
+
+                                    <div class="header__title--check">
+
+                                        <div class="header__title--quad">
+
+                                            <svg class="header__title--checksvg" width="10" height="8" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 4.5l2.124 2.124L8.97 1.28" stroke="#7C5DFA" stroke-width="1" fill-rule="evenodd"/>
+                                            </svg>
+
+                                        </div>
+
+                                        <p class="header__title--checktext">Paid</p>
+
+                                    </div>
+                    
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" class="header__select--svg">
+                        <path d="M1 1l4.228 4.228L9.456 1" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/>
+                    </svg>
+
+                    <div class="header__btn">
+
+                        <div class="header__btn--circle">
+
+                            <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg" class="header__btn--svg">
+                                <path d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z" fill="#7C5DFA" fill-rule="nonzero"/>
+                            </svg>
+
+                        </div>
+
+                        <p class="header__btn--text">New <span class="header__select--mobile">invoice</span></p>
+
+                    </div>
+                    
+                </div>
+
+                <div class="main">
+
+                    <div class="main__invoice">
+
+                        <h3 class="main__invoice--id">#RT3080</h3>
+                        <p class="main__invoice--date">Due <br class="main__invoice--tablet"><span class="main__invoice--colored">30 Mai 2021</span></p>
+                        <p class="main__invoice--name">Kay Hertenstein</p>
+
+                        <div class="main__invoice--mobile">
+
+                            <p class="main__invoice--date mobile">Due <span class="main__invoice--colored mobile">30 Mai 2021</span></p>
+                            <h3 class="main__invoice--amount mobile">CHF 2300.80</h3>
+
+                        </div>
+
+                        <h3 class="main__invoice--amount">CHF 2300.80</h3>
+
+                        <div class="main__invoice--status">
+
+                            <div class="main__invoice--circle"></div>
+                            <p class="main__invoice--text">Paid</p>
+
+                        </div>
+        
+                        <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg" class="main__invoice--check"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+                    </div>
+
+                        <div class="main__invoice">
+
+                        <h3 class="main__invoice--id">#RT3080</h3>
+                        <p class="main__invoice--date">Due <br class="main__invoice--tablet"><span class="main__invoice--colored">30 Mai 2021</span></p>
+                        <p class="main__invoice--name">Kay Hertenstein</p>
+
+                        <div class="main__invoice--mobile">
+
+                            <p class="main__invoice--date mobile">Due <span class="main__invoice--colored mobile">30 Mai 2021</span></p>
+                            <h3 class="main__invoice--amount mobile">CHF 2300.80</h3>
+
+                        </div>
+
+                        <h3 class="main__invoice--amount">CHF 2300.80</h3>
+                        
+                        <div class="main__invoice--status">
+
+                            <div class="main__invoice--circle"></div>
+                            <p class="main__invoice--text">Paid</p>
+
+                        </div>
+        
+                        <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg" class="main__invoice--check"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+                    </div>
+
+                    <div class="main__invoice">
+
+                        <h3 class="main__invoice--id">#RT3080</h3>
+                        <p class="main__invoice--date">Due <br class="main__invoice--tablet"><span class="main__invoice--colored">30 Mai 2021</span></p>
+                        <p class="main__invoice--name">Kay Hertenstein</p>
+
+                        <div class="main__invoice--mobile">
+
+                            <p class="main__invoice--date mobile">Due <span class="main__invoice--colored mobile">30 Mai 2021</span></p>
+                            <h3 class="main__invoice--amount mobile">CHF 2300.80</h3>
+
+                        </div>
+
+                        <h3 class="main__invoice--amount">CHF 2300.80</h3>
+                        
+                        <div class="main__invoice--status">
+
+                            <div class="main__invoice--circle"></div>
+                            <p class="main__invoice--text">Paid</p>
+
+                        </div>
+        
+                        <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg" class="main__invoice--check"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="main_empty disable">
+
+                <object data="./images/illustration-empty.svg" type="image/svg+xml" width="242" height="200" class="main__svg"></object>
+                <h3 class="main_empty--title">There is nothing here</h3>
+                <p class="main_empty--info">Create an Invoice by clicking the<span class="main_empty--text">New Invoice</span>button and get started</p>
+
+            </div>
+
+<!--     Wrapper View Invoice     -->
+
+            <div class="wrapper_Viewinvoice disable">
+
+                <div class="invoice_navigation">
+
+                    <svg width="7" height="10" xmlns="http://www.w3.org/2000/svg" class="invoice_navigation__symbol">
+                        <path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/>
+                    </svg>
+
+                    <p class="invoice_navigation__text">Go back</p>
+
+                </div>
+
+                <div class="Viewinvoice__header">
+                    
+                    <div class="Viewinvoice__headerelement">
+
+                        <p class="Viewinvoice__header--text">Status</p>
+
+                        <div class="Viewinvoice__headerbtn">
+
+                            <div class="Viewinvoice__headerbtn--circle"></div>
+                            <p class="Viewinvoice__headerbtn--text">Pending</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="Viewinvoice__headerelement">
+
+                        <div class="Viewinvoice__headeredit">
+
+                            <p class="Viewinvoice__headeredit--text">Edit</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__headerDelete">
+
+                            <p class="Viewinvoice__headerDelete--text">Delete</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__headerMark">
+
+                            <p class="Viewinvoice__headerMark--text">Mark as Paid</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="Viewinvoice__header--mobile">
+                    
+                    <div class="Viewinvoice__headerelement">
+                        <p class="Viewinvoice__header--text">Status</p>
+                        <div class="Viewinvoice__headerbtn">
+
+                            <div class="Viewinvoice__headerbtn--circle"></div>
+                            <p class="Viewinvoice__headerbtn--text">Pending</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="Viewinvoice__main">
+
+                    <div class="Viewinvoice__mainheader">
+
+                        <div class="Viewinvoice__mainheader--title">
+
+                            <h2 class="Viewinvoice__mainheader--titleelement">#XM9141</h2>
+                            <p class="Viewinvoice__mainheader--titledescription">Graphic Design</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__mainheader--adress">
+
+                            <p class="Viewinvoice__main--text">19 Union Terrace</p>
+                            <p class="Viewinvoice__main--text">London</p>
+                            <p class="Viewinvoice__main--text">EL 3EZ</p>
+                            <p class="Viewinvoice__main--text">United Kingdom</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="Viewinvoice__maininfo">
+
+                        <div class="Viewinvoice__mainInvoice">
+
+                            <p class="Viewinvoice__main--text">Invoice Date</p>
+                            <h2 class="Viewinvoice__mainInvoice--titleelement">21 Aug 2021</h2>
+                            <p class="Viewinvoice__main--text">Payment Due</p>
+                            <h2 class="Viewinvoice__mainInvoice--titleelement">20 Sep 2021</h2>
+
+                        </div>
+
+                        <div class="Viewinvoice__mainBill">
+
+                            <p class="Viewinvoice__main--text">Bill to</p>
+                            <h2 class="Viewinvoice__mainInvoice--titleelement">Alex Grim</h2>
+                            <p class="Viewinvoice__main--text">
+                                84 Church way<br>
+                                Broadford<br>
+                                BDI 9PB<br>
+                                United Kingdom
+                            </p>
+
+                        </div>
+
+                        <div class="Viewinvoice__mainSent">
+
+                            <p class="Viewinvoice__main--text">Sent to</p>
+                            <h2 class="Viewinvoice__mainInvoice--titleelement">Alexgrim@hotmail.com</h2>
+
+                        </div>
+    
+                    </div>
+
+                    <div class="Viewinvoice__mainSent--mobile">
+
+                        <p class="Viewinvoice__main--text">Sent to</p>
+                        <h2 class="Viewinvoice__mainInvoice--titleelement">Alexgrim@hotmail.com</h2>
+
+                    </div>
+
+                    <div class="Viewinvoice__mainpricing">
+
+                        <div class="Viewinvoice__mainrow">
+
+                            <p class="Viewinvoice__mainrow--text text_start">Item Name</p>
+                            <p class="Viewinvoice__mainrow--text">QTY</p>
+                            <p class="Viewinvoice__mainrow--text">Price</p>
+                            <p class="Viewinvoice__mainrow--text">Total</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__mainrow">
+
+                            <div class="Viewinvoice__mainrow--desktop">
+
+                                <p class="Viewinvoice__mainrow--text text_modify">Banner Design</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">1</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">$156.00</p>
+                                <p class="Viewinvoice__mainrow--text text_modify text_end">$156.00</p>
+
+                            </div>
+
+                            <div class="Viewinvoice__mainrow--mobile">
+
+                                <p class="Viewinvoice__mainrow--text text_modify">Banner Design</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">1x</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">$156.00</p>
+                                
+
+                            </div>
+
+                            <p class="Viewinvoice__mainrow--textmobile text_modify">$156.00</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__mainrow">
+
+                            <div class="Viewinvoice__mainrow--desktop">
+
+                                <p class="Viewinvoice__mainrow--text text_modify">Email Design</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">2</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">$200.00</p>
+                                <p class="Viewinvoice__mainrow--text text_modify text_end">$400.00</p>
+
+                            </div>
+
+                            <div class="Viewinvoice__mainrow--mobile">
+
+                                <p class="Viewinvoice__mainrow--text text_modify">Email Design</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">2x</p>
+                                <p class="Viewinvoice__mainrow--text text_modify1">$200.00</p>
+
+                            </div>
+
+                            <p class="Viewinvoice__mainrow--textmobile text_modify">$400.00</p>
+
+                        </div>  
+
+                        <div class="Viewinvoice__mainrow">
+
+                            <p class="Viewinvoice__mainrow--text text_start">Amount Due</p>
+                            <p class="Viewinvoice__mainrow--text text_end">$556.00</p>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="Viewinvoice__header--mobile">
+                    
+                    <div class="Viewinvoice__headerelement">
+
+                        <div class="Viewinvoice__headeredit">
+
+                            <p class="Viewinvoice__headeredit--text">Edit</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__headerDelete">
+
+                            <p class="Viewinvoice__headerDelete--text">Delete</p>
+
+                        </div>
+
+                        <div class="Viewinvoice__headerMark">
+
+                            <p class="Viewinvoice__headerMark--text">Mark as Paid</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+     
+            </div>
+
+<!--     Wrapper New Invoice     -->
+
+            <div class="wrapper_newandeditInvoice disable">
+
+                <h1 class="wrapper_newandeditInvoice__title">New Invoice</h1>
+
+                <div class="wrapper_newandeditInvoice__form">
+
+                    <p class="wrapper_newandeditInvoice__form--title">Bill From</p>
+
+                    <p class="wrapper_newandeditInvoice__form--text">Street Adress</p>
+                    <input type="text" placeholder="Brennofenstreet 22"  id="street_adr" class="wrapper_newandeditInvoice__form--inputlarge">
+                  
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">City</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Post Code</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Country</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+                        <input type="text" placeholder="Hogwarts"  id="city_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="6784"  id="post_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="Fantasy Island"  id="country_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                    </div>
+                    
+                    <p class="wrapper_newandeditInvoice__form--title">Bill To</p>
+        
+                    <p class="wrapper_newandeditInvoice__form--text">Clients Name</p>
+                    <input type="text" placeholder="Dreamworker"  id="Client_name" class="wrapper_newandeditInvoice__form--inputlarge">
+                
+                    <p class="wrapper_newandeditInvoice__form--text">Clients Email</p>
+                    <input type="text" placeholder="youremail@here.com"  id="Client_email" class="wrapper_newandeditInvoice__form--inputlarge">
+                
+                    <p class="wrapper_newandeditInvoice__form--text">Street Address</p>
+                    <input type="text" placeholder="Dreamworkersstreet"  id="Client_street" class="wrapper_newandeditInvoice__form--inputlarge">
+            
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">City</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Post Code</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Country</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Langenthal"  id="city_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="6914"  id="post_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="Swiss Island"  id="country_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                    
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Invoice Date</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Payment Terms</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="date" placeholder=""  id="invoice_date" class="wrapper_newandeditInvoice__form--inputmiddle">
+                    
+                        <select name="whishlist" class="wrapper_newandeditInvoice__form--inputselect">
+                            <option>Next 30 Days</option>
+                            <option>Next 15 Days</option>
+                            <option>Next 7 Days</option>     
+                        </select>
+                        
+                    </div>
+
+                    <p class="wrapper_newandeditInvoice__form--text">Project Description</p>
+                    <input type="text" placeholder="WebDevelopment"  id="Client_street" class="wrapper_newandeditInvoice__form--inputlarge">
+                
+                    <p class="wrapper_newandeditInvoice__form--title">Item List</p>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text width40">Item Name</p>
+                        <p class="wrapper_newandeditInvoice__form--text width10">Qty.</p>
+                        <p class="wrapper_newandeditInvoice__form--text width20">Price</p>
+                        <p class="wrapper_newandeditInvoice__form--text width19">Total</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Banner Design"  id="item1_name" class="wrapper_newandeditInvoice__form--input width40">
+                        <input type="text" placeholder="1"  id="item1_Qty" class="wrapper_newandeditInvoice__form--input width10">
+                        <input type="text" placeholder="156.00"  id="item1_price" class="wrapper_newandeditInvoice__form--input width20">
+                        
+                        <p class="wrapper_newandeditInvoice__form--textsized">156.00</p>
+                        
+                        <div class="wrapper_newandeditInvoice__form--flextext">
+
+                            <svg class="" width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/>
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text width40">Item Name</p>
+                        <p class="wrapper_newandeditInvoice__form--text width10">Qty.</p>
+                        <p class="wrapper_newandeditInvoice__form--text width20">Price</p>
+                        <p class="wrapper_newandeditInvoice__form--text width19">Total</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Email Service"  id="item2_name" class="wrapper_newandeditInvoice__form--input width40">
+                        <input type="text" placeholder="2"  id="item2_Qty" class="wrapper_newandeditInvoice__form--input width10">
+                        <input type="text" placeholder="200.00"  id="item2_price" class="wrapper_newandeditInvoice__form--input width20">
+                        
+                        <p class="wrapper_newandeditInvoice__form--textsized">400.00</p>
+                        
+                        <div class="wrapper_newandeditInvoice__form--flextext">
+
+                            <svg class="" width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/>
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--button">
+
+                        <p class="wrapper_newandeditInvoice__form--text">+ Add New Item</p>
+
+                    </div>    
+
+                    <div class="wrapper_newandeditInvoice__form--buttonsmall">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Discard</p>
+
+                    </div> 
+
+                    <div class="wrapper_newandeditInvoice__form--buttonmiddle">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Save as Draft</p>
+
+                    </div> 
+
+                    <div class="wrapper_newandeditInvoice__form--buttonmiddle">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Save and Send</p>
+
+                    </div> 
+
+                </div>  
+
+            </div>
+
+            <div class="wrapper_newandeditInvoice__footer disable"></div>
+
+<!--     Wrapper Edit Invoice     -->
+
+            <div class="wrapper_newandeditInvoice enable">
+
+                <h1 class="wrapper_newandeditInvoice__title">Edit #<span class="invoice_number">XM9141</span></h1>
+
+<!--     <div class="wrapper_newandeditInvoice__form--scrollable"> </div>     -->
+
+                <div class="wrapper_newandeditInvoice__form">
+
+                    <p class="wrapper_newandeditInvoice__form--title">Bill From</p>
+
+                    <p class="wrapper_newandeditInvoice__form--text">Street Adress</p>
+                    <input type="text" placeholder="Brennofenstreet 22"  id="street_adr" class="wrapper_newandeditInvoice__form--inputlarge">
+                        
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">City</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Post Code</p>
+                        <p class="wrapper_newandeditInvoice__form--textdesktop">Country</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Hogwarts"  id="city_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="6784"  id="post_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <p class="wrapper_newandeditInvoice__form--text">Country</p>
+                        <input type="text" placeholder="Fantasy Island"  id="country_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                    
+                    </div>
+                    
+                    <p class="wrapper_newandeditInvoice__form--title">Bill To</p>
+
+                    <p class="wrapper_newandeditInvoice__form--text">Clients Name</p>
+                    <input type="text" placeholder="Dreamworker"  id="Client_name" class="wrapper_newandeditInvoice__form--inputlarge">
+                    
+                    <p class="wrapper_newandeditInvoice__form--text">Clients Email</p>
+                    <input type="text" placeholder="youremail@here.com"  id="Client_email" class="wrapper_newandeditInvoice__form--inputlarge">
+                    
+                    <p class="wrapper_newandeditInvoice__form--text">Street Address</p>
+                    <input type="text" placeholder="Dreamworkersstreet"  id="Client_street" class="wrapper_newandeditInvoice__form--inputlarge">
+                    
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">City</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Post Code</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Country</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Langenthal"  id="city_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="6914"  id="post_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                        <input type="text" placeholder="Swiss Island"  id="country_code" class="wrapper_newandeditInvoice__form--inputsmall">
+                    
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Invoice Date</p>
+                        <p class="wrapper_newandeditInvoice__form--text">Payment Terms</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="date" placeholder=""  id="invoice_date" class="wrapper_newandeditInvoice__form--inputmiddle">
+                        
+                        <select name="whishlist" class="wrapper_newandeditInvoice__form--inputselect">
+                            <option>Next 30 Days</option>
+                            <option>Next 15 Days</option>
+                            <option>Next 7 Days</option>     
+                        </select>
+                            
+                    </div>
+
+                    <p class="wrapper_newandeditInvoice__form--text">Project Description</p>
+                    <input type="text" placeholder="WebDevelopment"  id="Client_street" class="wrapper_newandeditInvoice__form--inputlarge">
+                    <p class="wrapper_newandeditInvoice__form--title">Item List</p>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text width40">Item Name</p>
+                        <p class="wrapper_newandeditInvoice__form--text width10">Qty.</p>
+                        <p class="wrapper_newandeditInvoice__form--text width20">Price</p>
+                        <p class="wrapper_newandeditInvoice__form--text width19">Total</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Banner Design"  id="item1_name" class="wrapper_newandeditInvoice__form--input width40">
+                        <input type="text" placeholder="1"  id="item1_Qty" class="wrapper_newandeditInvoice__form--input width10">
+                        <input type="text" placeholder="156.00"  id="item1_price" class="wrapper_newandeditInvoice__form--input width20">
+                            
+                        <p class="wrapper_newandeditInvoice__form--textsized">156.00</p>
+                            
+                        <div class="wrapper_newandeditInvoice__form--flextext">
+
+                            <svg class="" width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/>
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <p class="wrapper_newandeditInvoice__form--text width40">Item Name</p>
+                        <p class="wrapper_newandeditInvoice__form--text width10">Qty.</p>
+                        <p class="wrapper_newandeditInvoice__form--text width20">Price</p>
+                        <p class="wrapper_newandeditInvoice__form--text width19">Total</p>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--flex">
+
+                        <input type="text" placeholder="Email Service"  id="item2_name" class="wrapper_newandeditInvoice__form--input width40">
+                        <input type="text" placeholder="2"  id="item2_Qty" class="wrapper_newandeditInvoice__form--input width10">
+                        <input type="text" placeholder="200.00"  id="item2_price" class="wrapper_newandeditInvoice__form--input width20">
+                
+                        <p class="wrapper_newandeditInvoice__form--textsized">400.00</p>
+                            
+                        <div class="wrapper_newandeditInvoice__form--flextext">
+
+                            <svg class="" width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/>
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div class="wrapper_newandeditInvoice__form--button">
+
+                        <p class="wrapper_newandeditInvoice__form--text">+ Add New Item</p>
+
+                    </div> 
+
+                    <div class="wrapper_newandeditInvoice__form--buttonmiddle">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Cancel</p>
+
+                    </div> 
+
+                    <div class="wrapper_newandeditInvoice__form--buttonmiddle">
+
+                        <p class="wrapper_newandeditInvoice__form--text">Save Changes</p>
+
+                    </div> 
+
+                </div>
+                   
+            </div>
+
+            <div class="wrapper_newandeditInvoice__footer enable"></div>
+ 
+        </div>
+
+    </body>
+
+</html>
+
+<script language="javascript" type="text/javascript" src=""></script>

@@ -1,0 +1,365 @@
+/* Stylesheet view and Edit Invoice  */
+
+/*  Desktop Design  */
+
+.wrapper_newandeditInvoice{
+
+    position: relative;  
+    flex-direction: column;
+    width: calc(60vw + 70px);
+    left: 140px;
+    padding: 45px 70px;
+    padding-bottom: 0px;
+    background-color: rgb(253, 253, 253);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    &__form{
+
+        margin-top: 50px;
+       
+        &--title{
+
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(128, 67, 241);
+            padding-bottom: 10px;
+
+        }
+
+        &--title:nth-child(6){
+
+            margin-top: 50px;
+
+        }
+
+        &--text{
+
+            color: darken(rgb(136, 142, 176), 10%);
+            padding: 15px 0px;
+            padding-top: 30px;
+            text-align: start;
+
+        }
+
+        &--textdesktop{
+
+            @extend .wrapper_newandeditInvoice__form--text;
+
+        }
+
+        &--input{
+
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 10px;
+            background-color: transparent;
+            border: 1px lightblue solid;
+
+        }
+
+        &--inputlarge{
+
+            @extend .wrapper_newandeditInvoice__form--input;
+            width: 100%;
+
+        }
+
+        &--inputsmall{
+
+            @extend .wrapper_newandeditInvoice__form--input;
+            width: 30%;
+
+        }
+
+        &--inputmiddle{
+
+            @extend .wrapper_newandeditInvoice__form--input;
+            width: 45%;
+
+        }
+
+        &--flex{
+
+            position: relative;
+            display: inline-flex; 
+            justify-content: space-between;
+            width: 100%;
+               
+        }
+
+        &--flex:nth-child(5) p:nth-child(3){
+
+            display: none;
+
+        }
+
+        &--flex:nth-child(15) p{
+
+            width: 45%;
+               
+        }
+
+        &--flex .wrapper_newInvoice__form--text{
+
+            width: 30%;
+            
+        }
+
+        &--label{
+
+            position: relative;
+            width: 30%;
+           
+        }
+
+        &--inputselect{
+
+            background-color: transparent;
+            width: 45%;
+            border: 1px lightblue solid;
+
+        }
+
+        &--title:nth-child(19){
+
+            margin-top: 50px;
+
+        }
+
+        &--textsized{
+
+            padding: 0px 0px;
+            width: 10%;
+            align-self: center;
+
+        }
+
+        &--flextext{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5%;
+
+        }
+
+        &--button{
+
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 25px;
+            margin-top: 20px;
+            background-color: lighten(rgb(136, 142, 176), 30%);
+            color: darken(rgb(136, 142, 176), 10%);
+
+        }
+
+        &--button p{
+
+            padding: 15px 0px;
+
+        }
+
+        &--buttonsmall{
+
+            @extend .wrapper_newandeditInvoice__form--button;
+            width: 20%;
+            margin-top: 40px;
+            margin-right: 18%;
+
+        }
+
+        &--buttonmiddle{
+
+            @extend .wrapper_newandeditInvoice__form--button;
+            width: 30%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            background-color: lighten(rgb(37, 41, 69), 20%);
+            color: darken(rgb(136, 142, 176), 10%);
+           
+        }
+
+        &--buttonmiddle:nth-child(27){
+
+            background-color: lighten(rgb(124, 93, 250), 0%);
+            
+        }
+
+        &--buttonmiddle:nth-child(27) p{
+
+            color: white;
+            
+        }
+
+        &--buttonmiddle:nth-child(25){
+
+            background-color: lighten(rgb(136, 142, 176), 30%);
+            color: darken(rgb(136, 142, 176), 10%);
+            margin-left: 39%;
+
+        } 
+
+        &--buttonmiddle:nth-child(26){
+
+            background-color: lighten(rgb(124, 93, 250), 0%);
+
+        } 
+
+        &--buttonmiddle:nth-child(26) p{
+
+            color: white;
+
+        } 
+        
+    }
+
+    &__footer{
+
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        left: 0px;
+        height: 90px;
+
+    }
+
+}
+
+/** Globale Klassen  **/
+
+.enable{
+
+    display: inline-flex;
+
+}
+
+.disable{
+
+    display: none;
+
+}
+
+.width10{
+
+    width: 10% !important;
+
+}
+
+.width19{
+
+    width: 19% !important;
+
+}
+
+.width20{
+
+    width: 20% !important;
+
+}
+
+.width40{
+
+    width: 40% !important;
+
+}
+
+.inline{
+
+    position: relative;
+    display: inline-block;
+
+}
+
+/*  Tablet Design in work     */
+  
+@media (max-width: 800px){
+
+    .wrapper_newandeditInvoice{
+
+        &__form{
+
+            &--textdesktop{
+
+                display: none;
+
+            }
+
+            &--flex:nth-child(5) p:nth-child(3){
+
+                display: inline-block;
+    
+            }
+
+            &--flex:nth-child(4){
+
+                flex-wrap: wrap;
+
+            }
+
+            &--flex:nth-child(4) p:nth-child(-n+2){
+
+                width: 49%;
+
+            }
+
+
+            &--flex:nth-child(5){
+
+                flex-wrap: wrap;
+
+            }
+
+            &--flex:nth-child(5) input:nth-child(-n+2){
+
+                width: 49%;
+
+            }
+
+            &--flex:nth-child(5) input:nth-child(4){
+
+                width: 100%;
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+}
+
+  
+@media (max-width: 875px){}
+    
+ 
+@media (max-width: 660px){}
+
+
+
+    
+
+   
+
+  
