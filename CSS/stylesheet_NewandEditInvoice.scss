@@ -42,6 +42,30 @@
 
         }
 
+        &--textpseudo{
+
+           display: none;
+
+        }
+
+        &--flex:nth-child(4) p{
+
+            width: 30%;
+
+        }
+
+        &--flex:nth-child(13) p{
+
+            width: 30%;
+
+        }
+
+        &--flex:nth-child(14) p{
+
+            display: none;
+
+        }
+
         &--textdesktop{
 
             @extend .wrapper_newandeditInvoice__form--text;
@@ -57,6 +81,18 @@
             padding: 10px 10px;
             background-color: transparent;
             border: 1px lightblue solid;
+
+        }
+
+        &--inputmobile{
+    
+            display: none;
+
+        }
+
+        &--inputdesktop{
+    
+            @extend .wrapper_newandeditInvoice__form--input;
 
         }
 
@@ -91,6 +127,18 @@
         }
 
         &--flex:nth-child(5) p:nth-child(3){
+
+            display: none;
+
+        }
+
+        &--flex:nth-child(15) input:nth-child(2){
+
+            display: none;
+
+        }
+
+        &--flex:nth-child(15) select:nth-child(4){
 
             display: none;
 
@@ -154,15 +202,17 @@
             align-items: center;
             width: 100%;
             border-radius: 25px;
-            margin-top: 20px;
+            margin-top: 40px;
             background-color: lighten(rgb(136, 142, 176), 30%);
             color: darken(rgb(136, 142, 176), 10%);
+            cursor: pointer;
 
         }
 
         &--button p{
 
             padding: 15px 0px;
+            cursor: pointer;
 
         }
 
@@ -183,13 +233,23 @@
             margin-bottom: 40px;
             background-color: lighten(rgb(37, 41, 69), 20%);
             color: darken(rgb(136, 142, 176), 10%);
+            cursor: pointer;
            
         }
 
-        &--buttonmiddle:nth-child(27){
+        &--buttonmiddlecolored{
 
+            @extend .wrapper_newandeditInvoice__form--buttonmiddle;
             background-color: lighten(rgb(124, 93, 250), 0%);
-            
+              
+        }
+
+        &--buttonmiddlecolored p{
+
+            color:rgb(253, 253, 253);
+            padding: 15px 0px;
+            cursor: pointer;
+              
         }
 
         &--buttonmiddle:nth-child(27) p{
@@ -197,14 +257,6 @@
             color: white;
             
         }
-
-        &--buttonmiddle:nth-child(25){
-
-            background-color: lighten(rgb(136, 142, 176), 30%);
-            color: darken(rgb(136, 142, 176), 10%);
-            margin-left: 39%;
-
-        } 
 
         &--buttonmiddle:nth-child(26){
 
@@ -229,6 +281,12 @@
         height: 90px;
 
     }
+
+}
+
+.delete_item .delete_item--path{
+
+    cursor: pointer;
 
 }
 
@@ -309,7 +367,6 @@
 
             }
 
-
             &--flex:nth-child(5){
 
                 flex-wrap: wrap;
@@ -328,23 +385,135 @@
 
             }
 
+            &--flex:nth-child(13) p{
 
+                width: 49%;
+    
+            }
 
+            &--flex:nth-child(14) {
+
+                flex-wrap: wrap;
+    
+            }
+
+            &--flex:nth-child(14) input:nth-child(-n+2){
+
+                width: 49%;
+
+            }
+
+            &--flex:nth-child(14) input:nth-child(4){
+
+                width: 100%;
+
+            }
+
+            &--flex:nth-child(14) p:nth-child(3){
+
+                display: inline-block;
+    
+            }
+
+            &--flex:nth-child(15) {
+
+                flex-wrap: wrap;
+    
+            }
+
+            &--flex:nth-child(15) p{
+
+                width: 100%;
+    
+            }
+
+            &--flex:nth-child(15) input:nth-child(2){
+
+                display: inline-block;
+                width: 100%;
+    
+            }
+    
+            &--flex:nth-child(15) select:nth-child(4){
+    
+                display: inline-block;
+                width: 100%;
+                font-size: 16px;
+                padding: 10px 10px;
+    
+            }
+
+            &--flex:nth-child(16) {
+
+                display: none;
+    
+            }
+
+            &--inputmobile{
+    
+                position: relative;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 10px 10px;
+                background-color: transparent;
+                border: 1px lightblue solid;
+    
+            }
+
+            &--inputdesktop{
+    
+                display: none;
+    
+            }
+
+            &--textpseudo{
+
+                display: inline-block;
+                position: relative;
+                width: 20px;
+     
+            }
 
         }
 
+    }
 
-
-
-
+    .wrap{
+       
+        flex-wrap: wrap;
 
     }
 
+    .width40{
 
+        width: 100% !important;
+    
+    }
 
+    .width10{
 
+        width: 20% !important;
+    
+    }
 
+    .width19{
 
+        width: 40px !important;
+    
+    }
+
+    .width20{
+
+        width: 30% !important;
+    
+    }
+
+    .right80{
+
+        margin-right: 80px;
+
+    }
 
 
 

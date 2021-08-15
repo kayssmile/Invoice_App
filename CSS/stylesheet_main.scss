@@ -251,6 +251,7 @@ body{
         align-items: center;
         background-color:rgb(124, 93, 250);
         border-radius: 50px;
+        cursor: pointer;
 
         &--circle{
 
@@ -264,6 +265,7 @@ body{
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
 
         }
 
@@ -280,6 +282,7 @@ body{
             color: rgb(255, 255, 255);
             margin: 0px 25px;
             margin-left: 15px;
+            cursor: pointer;
 
         }
 

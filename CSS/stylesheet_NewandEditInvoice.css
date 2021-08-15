@@ -37,7 +37,23 @@
   text-align: start;
 }
 
-.wrapper_newandeditInvoice__form--input, .wrapper_newandeditInvoice__form--inputlarge, .wrapper_newandeditInvoice__form--inputsmall, .wrapper_newandeditInvoice__form--inputmiddle {
+.wrapper_newandeditInvoice__form--textpseudo {
+  display: none;
+}
+
+.wrapper_newandeditInvoice__form--flex:nth-child(4) p {
+  width: 30%;
+}
+
+.wrapper_newandeditInvoice__form--flex:nth-child(13) p {
+  width: 30%;
+}
+
+.wrapper_newandeditInvoice__form--flex:nth-child(14) p {
+  display: none;
+}
+
+.wrapper_newandeditInvoice__form--input, .wrapper_newandeditInvoice__form--inputdesktop, .wrapper_newandeditInvoice__form--inputlarge, .wrapper_newandeditInvoice__form--inputsmall, .wrapper_newandeditInvoice__form--inputmiddle {
   position: relative;
   display: inline-block;
   font-size: 16px;
@@ -45,6 +61,10 @@
   padding: 10px 10px;
   background-color: transparent;
   border: 1px lightblue solid;
+}
+
+.wrapper_newandeditInvoice__form--inputmobile {
+  display: none;
 }
 
 .wrapper_newandeditInvoice__form--inputlarge {
@@ -71,6 +91,14 @@
 }
 
 .wrapper_newandeditInvoice__form--flex:nth-child(5) p:nth-child(3) {
+  display: none;
+}
+
+.wrapper_newandeditInvoice__form--flex:nth-child(15) input:nth-child(2) {
+  display: none;
+}
+
+.wrapper_newandeditInvoice__form--flex:nth-child(15) select:nth-child(4) {
   display: none;
 }
 
@@ -118,7 +146,7 @@
   width: 5%;
 }
 
-.wrapper_newandeditInvoice__form--button, .wrapper_newandeditInvoice__form--buttonsmall, .wrapper_newandeditInvoice__form--buttonmiddle {
+.wrapper_newandeditInvoice__form--button, .wrapper_newandeditInvoice__form--buttonsmall, .wrapper_newandeditInvoice__form--buttonmiddle, .wrapper_newandeditInvoice__form--buttonmiddlecolored {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -131,13 +159,15 @@
           align-items: center;
   width: 100%;
   border-radius: 25px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: #e4e5ed;
   color: #69719c;
+  cursor: pointer;
 }
 
-.wrapper_newandeditInvoice__form--button p, .wrapper_newandeditInvoice__form--buttonsmall p, .wrapper_newandeditInvoice__form--buttonmiddle p {
+.wrapper_newandeditInvoice__form--button p, .wrapper_newandeditInvoice__form--buttonsmall p, .wrapper_newandeditInvoice__form--buttonmiddle p, .wrapper_newandeditInvoice__form--buttonmiddlecolored p {
   padding: 15px 0px;
+  cursor: pointer;
 }
 
 .wrapper_newandeditInvoice__form--buttonsmall {
@@ -146,33 +176,34 @@
   margin-right: 18%;
 }
 
-.wrapper_newandeditInvoice__form--buttonmiddle {
+.wrapper_newandeditInvoice__form--buttonmiddle, .wrapper_newandeditInvoice__form--buttonmiddlecolored {
   width: 30%;
   margin-top: 40px;
   margin-bottom: 40px;
   background-color: #495087;
   color: #69719c;
+  cursor: pointer;
 }
 
-.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(27) {
+.wrapper_newandeditInvoice__form--buttonmiddlecolored {
   background-color: #7c5dfa;
 }
 
-.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(27) p {
+.wrapper_newandeditInvoice__form--buttonmiddlecolored p {
+  color: #fdfdfd;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(27) p, .wrapper_newandeditInvoice__form--buttonmiddlecolored:nth-child(27) p {
   color: white;
 }
 
-.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(25) {
-  background-color: #e4e5ed;
-  color: #69719c;
-  margin-left: 39%;
-}
-
-.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(26) {
+.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(26), .wrapper_newandeditInvoice__form--buttonmiddlecolored:nth-child(26) {
   background-color: #7c5dfa;
 }
 
-.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(26) p {
+.wrapper_newandeditInvoice__form--buttonmiddle:nth-child(26) p, .wrapper_newandeditInvoice__form--buttonmiddlecolored:nth-child(26) p {
   color: white;
 }
 
@@ -182,6 +213,10 @@
   width: 100%;
   left: 0px;
   height: 90px;
+}
+
+.delete_item .delete_item--path {
+  cursor: pointer;
 }
 
 /** Globale Klassen  **/
@@ -240,6 +275,78 @@
   }
   .wrapper_newandeditInvoice__form--flex:nth-child(5) input:nth-child(4) {
     width: 100%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(13) p {
+    width: 49%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(14) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(14) input:nth-child(-n+2) {
+    width: 49%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(14) input:nth-child(4) {
+    width: 100%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(14) p:nth-child(3) {
+    display: inline-block;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(15) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(15) p {
+    width: 100%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(15) input:nth-child(2) {
+    display: inline-block;
+    width: 100%;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(15) select:nth-child(4) {
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  .wrapper_newandeditInvoice__form--flex:nth-child(16) {
+    display: none;
+  }
+  .wrapper_newandeditInvoice__form--inputmobile {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 10px;
+    background-color: transparent;
+    border: 1px lightblue solid;
+  }
+  .wrapper_newandeditInvoice__form--inputdesktop {
+    display: none;
+  }
+  .wrapper_newandeditInvoice__form--textpseudo {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+  }
+  .wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .width40 {
+    width: 100% !important;
+  }
+  .width10 {
+    width: 20% !important;
+  }
+  .width19 {
+    width: 40px !important;
+  }
+  .width20 {
+    width: 30% !important;
+  }
+  .right80 {
+    margin-right: 80px;
   }
 }
 /*# sourceMappingURL=stylesheet_NewandEditInvoice.css.map */
