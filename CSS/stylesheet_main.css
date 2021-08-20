@@ -409,7 +409,7 @@ body {
   .main__invoice--date {
     font-size: 10px;
     font-weight: 500;
-    margin-left: 5px;
+    margin-left: 0px;
   }
   .main__invoice--name {
     font-size: 10px;
