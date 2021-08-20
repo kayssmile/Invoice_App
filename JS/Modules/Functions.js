@@ -6,13 +6,19 @@
 
 function deleteallInputs(){
 
-    var allinputs = document.querySelectorAll("input");
-    console.log(allinputs);
+    let all_inputs = document.querySelectorAll("input");
+    var all_inputs_var = document.querySelectorAll(".js_inputnew");
 
-    
+    let arr_all_inputs = Array.from(all_inputs);
+    var all_inputs_newInvoice = arr_all_inputs.slice(0,12);
 
+    for(let input of all_inputs_newInvoice){
 
-    for(input of allinputs){
+        input.value = "";
+
+    }
+
+    for(let input of all_inputs_var){
 
         input.value = "";
     }
@@ -43,7 +49,7 @@ function createnewitem(id){
     names_div.classList.add("wrapper_newandeditInvoice__form--flex", "wrap");
 
     names_div.innerHTML = `<p class="wrapper_newandeditInvoice__form--text width40">Item Name</p>
-                        <input type="text" placeholder="Banner Design"  id="item${idneu}_name" class="wrapper_newandeditInvoice__form--inputmobile width40">
+                        <input type="text" placeholder="Banner Design"  id="item${idneu}_name" class="wrapper_newandeditInvoice__form--inputmobile js_inputnew width40">
                         <p class="wrapper_newandeditInvoice__form--text width10">Qty.</p>
                         <p class="wrapper_newandeditInvoice__form--text width20 ">Price</p>
                         <p class="wrapper_newandeditInvoice__form--text width19 ">Total</p>
@@ -52,9 +58,9 @@ function createnewitem(id){
     let inputs_div = document.createElement("div");
     inputs_div.classList.add("wrapper_newandeditInvoice__form--flex");
 
-    inputs_div.innerHTML = `<input type="text" placeholder="Service Name"  id="item${idneu}_name" class="wrapper_newandeditInvoice__form--inputdesktop width40">
-                            <input type="text" placeholder="Services Count"  id="item${idneu}_Qty" class="wrapper_newandeditInvoice__form--input width10">
-                            <input type="text" placeholder="Service Price"  id="item${idneu}_price" class="wrapper_newandeditInvoice__form--input width20">
+    inputs_div.innerHTML = `<input type="text" placeholder="Service Name"  id="item${idneu}_name" class="wrapper_newandeditInvoice__form--inputdesktop js_inputnew width40">
+                            <input type="text" placeholder="Services Count"  id="item${idneu}_Qty" class="wrapper_newandeditInvoice__form--input js_inputnew width10">
+                            <input type="text" placeholder="Service Price"  id="item${idneu}_price" class="wrapper_newandeditInvoice__form--input js_inputnew width20">
         
                             <p class="wrapper_newandeditInvoice__form--textsized ">400.00</p>
         

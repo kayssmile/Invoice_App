@@ -687,68 +687,6 @@
     
     }
     
-    .menu__item{
-    
-        &top{
-    
-        position: absolute;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 180px;
-        height: 100px;
-        top: 0px;
-        left: -90px;
-        background-color: rgb(124, 93, 250);
-        z-index: 1;
-        opacity: 0.8;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-    
-            &--svg{
-    
-                transform: scale(2.3);
-    
-            }
-
-        }
-    
-        &center{
-    
-            position: absolute;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px; 
-            right: 100px;
-    
-            &--svgmoon{
-    
-                transform: scale(1.5);
-    
-            }
-    
-        }
-    
-        &bot{
-    
-            position: absolute;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 180px;
-            height: 100px;
-            right: 0px;
-            border-top: none;
-    
-            &--pic{
-    
-                border-radius: 50%;
-    
-            }
-        }
-    }
-   
 }
 
 @media (max-width: 500px){
@@ -827,7 +765,9 @@
             margin-top: 5px;
 
         }
+
     }
+    
 }
    
 @media (max-width: 435px){

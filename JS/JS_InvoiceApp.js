@@ -30,6 +30,7 @@ console.log(filter_box);
 
 wrapper_content.addEventListener("click", delegation_InvoiceApp);
 wrapper_NewInvoice.addEventListener("click", delegation_NewInvoice);
+wrapper_ViewInvoice.addEventListener("click", delegation_ViewInvoice);
 
 
 
@@ -40,6 +41,33 @@ wrapper_NewInvoice.addEventListener("click", delegation_NewInvoice);
 
 
 /* Functions*/
+
+
+function delegation_ViewInvoice(event){
+
+    var element = event.target;
+
+    if(element.matches(".Viewinvoice__headeredit")|| element.matches(".Viewinvoice__headeredit--text")){
+
+        wrapper_ViewInvoice.classList.remove("enable");
+        wrapper_ViewInvoice.classList.add("disable");
+        wrapper_EditInvoice.classList.remove("disable");
+        wrapper_EditInvoice.classList.add("enable");
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 function delegation_NewInvoice(event){
 
